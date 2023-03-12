@@ -17,7 +17,7 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-            '~mdb-ui-kit': path.resolve(__dirname, 'node_modules/mdb-ui-kit')
+            '~mdb-ui-kit': path.resolve(__dirname, 'node_modules/mdb-ui-kit'),
         }
     }
 });

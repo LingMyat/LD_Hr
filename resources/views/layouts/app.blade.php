@@ -13,6 +13,8 @@
         @if (isset($css))
             {{ $css }}
         @endif
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/scss/app.scss'])
     </head>
@@ -30,13 +32,20 @@
             @endif
 
             <!-- Page Content -->
-            <main>
+            <main class="position-relative">
+                <a id="show-sidebar" class="btn btn-dark position-absolute" href="javascript:void(0)">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
                 {{ $slot }}
             </main>
         </div>
-        <script>
+        <x-sidebar></x-sidebar>
+        <!-- jQuery -->
+        <script
+        src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+        crossorigin="anonymous"></script>
 
-        </script>
         @if (isset($script))
             {{ $script }}
         @endif
